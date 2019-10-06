@@ -1,0 +1,19 @@
+/*! This project uses Gridify.scss | https://github.com/julian-hecker/Gridify.scss/ | MIT License */
+
+/// Gridify.scss
+
+
+/// Create a grid wrapper with custom number of columns and gap sizes.
+/// @name   Gridify
+/// @author Julian Hecker
+/// @param  {integer} $columns [1] - Sets number of columns for grid to use.
+/// @param  {length} $gap-size [1rem] - Sets spacing between grid items.
+/// @output A grid container with a given number of columns and gap widths.
+@mixin gridify($columns: 2, $gap-size: 1rem) {
+  display: grid;
+  column-gap: $gap-size;
+  row-gap: $gap-size;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-auto-flow: row;
+}
+
