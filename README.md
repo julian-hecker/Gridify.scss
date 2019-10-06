@@ -7,7 +7,7 @@ Easily create CSS Grids with reusable, modular code.
 - Integrate smoothly with modular SCSS code
     - simply `@include gridify($columns, $gap-size);` in whichever container you want to be a grid.
 - Change number of columns
-    - Change optional arguments. Default values: $columns: 12, $gap-size: 1rem
+    - Change optional arguments. Default values: `$columns: 12, $gap-size: 1rem`
 - Easily make responsive layouts
     - just include the gridify mixin at different media queries.
 
@@ -31,7 +31,8 @@ Easily create CSS Grids with reusable, modular code.
 
 
 
-
+## Contributions
+Please feel free to contribute to the project with suggestions, issues, bug reports, as well as pull requests!
 
 ## Demo / Testing
 An [example codepen is available](Not yet actually, please wait for a bit!) trying out all the features.
