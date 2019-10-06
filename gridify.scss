@@ -17,3 +17,52 @@
   grid-auto-flow: row;
 }
 
+/// Given a list of lists containing grid-areas, columns, and rows,
+/// creates a valid grid-template-areas value.
+/// @name   templateAreas
+/// @author Julian Hecker
+/// @param  {list} $list - list where each value is a nested list which has ($grid-area, $columns).
+/// @example @include templateArea( ( ("logo", 3), ("nav-links", 8), ("button", 1) ) );
+/// @throw  Error if argument is not list.
+/// @output Creates a `grid-template-areas` declaration based on argument list.
+@mixin templateAreas($list) {
+  @if type-of($list) != list {
+    @error "templateAreas mixin must take a SCSS list as its argument!"
+  }
+
+  $resultString: "";
+  $rows: 1;
+  @for $i from 1 through length($list) {
+    $area: "";
+    $areaColumns: 1;
+    $areaRows: 1;
+    @for $j from 1 through length(nth($list, $i)) {
+      @if $j == 1 {
+        // Set $area to the first element in each sub-array.
+        $area: nth(nth($list, $i), $j);
+      }
+      @if $j == 2 {
+        // Set $areaColumns to the second element in each sub-array.
+        $areaColumns: nth(nth($list, $i), $j);
+      }
+      @if $j == 3 {
+        // Set $areaRows to the third element in each sub-array.
+        $areaRows: nth(nth($list, $i), $j);
+        // If this area has more rows, increase max rows
+        @if $areaRows > $rows {
+          $rows: $areaRows;
+        }
+      }
+    }
+
+    @for $k from 1 through $areaColumns {
+      $resultString: $resultString + $area + " ";
+    }
+
+    // Rows not supported yet! Would otherwise try to add another string.
+    @if $rows > 1 {
+      @warn "WARNING! Gridify.scss does not yet support multiple rows. Please check your templateAreas arguments.";
+    }
+  }
+  grid-template-areas: $resultString;
+}
