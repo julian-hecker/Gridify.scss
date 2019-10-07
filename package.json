@@ -1,0 +1,25 @@
+{
+  "name": "gridify-scss",
+  "version": "0.1.0",
+  "description": "Redefine what it means to be a Grid.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julian-hecker/Gridify.scss.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "grid",
+    "layout"
+  ],
+  "author": "Julian Hecker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julian-hecker/Gridify.scss/issues"
+  },
+  "homepage": "https://github.com/julian-hecker/Gridify.scss#readme"
+}

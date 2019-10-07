@@ -1,5 +1,6 @@
 /*! This project uses Gridify.scss | https://github.com/julian-hecker/Gridify.scss/ | MIT License */
 
+
 /// Create a grid wrapper with custom number of columns and gap sizes.
 /// @name   Gridify
 /// @author Julian Hecker
@@ -15,6 +16,7 @@
   grid-template-columns: repeat($columns, 1fr);
   grid-auto-flow: row;
 }
+
 
 /// Given a list of lists containing grid-areas, columns, and rows,
 /// creates a valid grid-template-areas value.
@@ -68,3 +70,4 @@
   }
   grid-template-areas: $result;
 }
+
