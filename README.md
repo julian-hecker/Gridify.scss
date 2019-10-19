@@ -12,6 +12,13 @@ Make actual rows capability
 - How to deal with row height? auto, by content?
 - To make the templateAreas function, save the starting and ending positions of each grid-area.
 
+Layered mixins for @supports support?
+`@include gridSupport {
+    @include gridify();
+    @include templateAreas();
+}
+
+
 Polish up the testing codepen
 
 Documentations
@@ -39,6 +46,7 @@ Documentations
 
 ## What's included in Gridify.scss?
 - mixin for gridify with adjustable columns and gap sizes
+- mixins for testing CSS Grid Support and fallback code
 - mixin for making a `grid-template-areas` declaration
 
 ## Demo / Testing

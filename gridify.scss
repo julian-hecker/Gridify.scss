@@ -1,20 +1,37 @@
 /*! This project uses Gridify.scss | https://github.com/julian-hecker/Gridify.scss/ | MIT License */
 
-
 /// Create a grid wrapper with custom number of columns and gap sizes.
 /// @name   Gridify
 /// @author Julian Hecker
-/// @param  {integer} $columns [1] - Sets number of columns for grid to use.
+/// @param  {integer} $columns [12] - Sets number of columns for grid to use.
 /// @param  {length} $gap-size [1rem] - Sets spacing between grid items.
+/// @param  {integer} $rows [1] (optional) Sets number of rows to use.
 /// @output A grid container with a given number of columns and gap widths.
-@mixin gridify($columns: 2, $gap-size: 1rem) {
+@mixin gridify($columns: 12, $gap-size: 1rem, $rows: 1) {
   display: grid;
-  // grid-gap is deprecated, but for the oldies out there :)
-  grid-gap: $gap-size;
-  column-gap: $gap-size;
-  row-gap: $gap-size;
+  // grid-gap is deprecated
+  column-gap: $gap-size; row-gap: $gap-size;
+  // Creates grid with number of desired equal columns
   grid-template-columns: repeat($columns, 1fr);
+  // Creates rows based on content size
+  grid-template-rows: repeat($rows, auto);
+  // Overflowing content goes to a new row
   grid-auto-flow: row;
+}
+
+
+// include grid fallback code inside here
+@mixin supportNotGrid() {
+  @supports not ((display: grid) or (display: contents) or (grid-template-areas: "test")) {
+    @content;
+  }
+}
+
+// include CSS Grid statements inside here
+@mixin supportGrid() {
+  @supports (display: grid) and (display: contents) and (grid-template-areas: "test") {
+    @content;
+  }
 }
 
 
@@ -71,3 +88,5 @@
   grid-template-areas: $result;
 }
 
+
+// Write about Gridify to replace Bootstrap Grid
