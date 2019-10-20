@@ -53,3 +53,4 @@ Please feel free to contribute to the project with suggestions, issues, bug repo
 ## Future Plans
 - Draggable grid areas (Would require lots of JavaScript)
 - Responsive grid classes.
+- Classes for placing items in a grid.
