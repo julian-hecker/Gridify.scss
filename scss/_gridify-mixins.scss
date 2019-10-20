@@ -1,5 +1,8 @@
  /*! This project uses Gridify.scss | https://github.com/julian-hecker/Gridify.scss/ | MIT License */
 
+
+// === Mixins === //
+
  @mixin templateGrid() {
   display: grid;
   // Overflowing content goes to a new row
@@ -12,10 +15,9 @@
 }
 
 @mixin templateGaps($gap-size) {
-  // grid-gap is deprecated
+  // grid-gap is deprecated, but still used by older browsers.
   grid-gap: $gap-size;
   gap: $gap-size;
-  // column-gap: $gap-size; row-gap: $gap-size;
 }
 
 @mixin templateRows($rows) {
@@ -53,6 +55,3 @@
   @include templateRows($rows);
 }
 
-// Add Namespace?
-// External Variables List?
-// Responsive Dist classes

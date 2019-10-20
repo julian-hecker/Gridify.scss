@@ -1,0 +1,49 @@
+// === For Distribution === //
+@import 'gridify-mixins';
+
+
+// === Variables === //
+
+$gridify-namespace: 'gridify-'      !default;
+$gridify-max-cols: 12               !default;
+$gridify-max-rows: 12               !default;
+$gridify-gap-list: (1: .5rem, 2: 1rem, 3: 2rem, 4: 4rem) !default;
+
+
+
+
+// === Classes === //
+
+// Grid container
+.#{$gridify-namespace}grid {
+  @include templateGrid();
+  // Default gaps of 1rem
+  @include templateGaps(1rem);
+}
+
+// Grid Column Classes
+// Grids with columns from 2 through 12
+@for $i from 2 through $gridify-max-cols {
+  .#{$gridify-namespace}cols-#{$i} {
+    @include templateColumns($i);
+  }
+}
+
+// Grid Row Classes
+// Grids with rows from 2 through 12
+@for $i from 2 through $gridify-max-rows {
+  .#{$gridify-namespace}rows-#{$i} {
+    @include templateRows($i);
+  }
+}
+
+// Grid Gap Classes
+// Gaps from list from .5 to 4 rem
+@each $key, $value in $gridify-gap-list {
+  .#{$gridify-namespace}gaps-#{$key} {
+    @include templateGaps($value);
+  }
+}
+
+// TODO:
+// Responsive Classes
