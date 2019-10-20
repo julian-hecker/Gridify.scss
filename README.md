@@ -3,30 +3,6 @@ Redefine what it means to be a grid.
 - Powered by CSS Grid, the most powerful in CSS layout.
 
 
-
-<!-- 
-Next steps for this project:
-
-Make actual rows capability
-- @include gridify(columns, gap, rows);
-- How to deal with row height? auto, by content?
-- To make the templateAreas function, save the starting and ending positions of each grid-area.
-
-Layered mixins for @supports support?
-`@include gridSupport {
-    @include gridify();
-    @include templateAreas();
-}
-
-
-Polish up the testing codepen
-
-Documentations
-
- -->
-
-
-
 ## Benefits
 - Absolutely annihilate and exterminate tons of code from your markup.
     - With Gridify.scss, there is no need for bloating classes like `.row` or `.col-sm-8`.
@@ -37,17 +13,25 @@ Documentations
 
 
 ## Usage
-1. Add the `gridify.scss` file to your project.
-2. In SCSS, `@include gridify($columns, $gap-size);` where ever you'd like a grid.
-3. (Optional) Assign template areas, either using the default syntax, 
-    or the included `templateAreas` mixin.
-4. Compile along with the rest of your SCSS.
-5. Profit from making layouts easier!
+There are two main ways the project could be used.
+
+### Recommended Usage
+1. add the mixins file from `scss/_gridify-mixins.scss` into your project.
+2. Include the `gridify()` mixin to define a grid container with the desired number of columns, gap sizes, and rows.
+3. Place grid items inside grid using CSS `grid-template-areas` or `grid-column` / `grid-row` 
+4. Compile along with the rest of your scss.
+5. Profit from easy layouts!
+
+### Other Usage (Not Recommended)
+1. Copy the compiled `gridify-dist.css` file into your project
+2. Use the pre-defined classes to define a grid container's properties.
+3. Place grid items inside using CSS properties
+4. Profit from easy layouts!
+
 
 ## What's included in Gridify.scss?
-- mixin for gridify with adjustable columns and gap sizes
-- mixins for testing CSS Grid Support and fallback code
-- mixin for making a `grid-template-areas` declaration
+- Mixin to declare a grid container with adjustable columns, gap size, and rows.
+- Mixins for testing CSS Grid Support and fallback code
 
 ## Demo / Testing
 An [example codepen is available](https://codepen.io/what-the-heck-julian/pen/eYYYMZX) for trying out all the features.
@@ -65,6 +49,7 @@ Please feel free to contribute to the project with suggestions, issues, bug repo
 ## Special Thanks
 - [Alex Tsirozidis](https://itnext.io/@alexfirebrand), who [wrote an article on ITNext](https://itnext.io/stop-using-bootstrap-create-a-practical-css-grid-template-for-your-component-based-ui-da784d974cc7) which inspired this project.
 
+
 ## Future Plans
-- Explicit support for multi-row grids
-- Draggable grid areas (Would require javaScript)
+- Draggable grid areas (Would require lots of JavaScript)
+- Responsive grid classes.
