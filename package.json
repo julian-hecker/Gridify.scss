@@ -4,7 +4,8 @@
   "description": "Redefine what it means to be a Grid.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass scss -o css && node-sass --watch scss -o css"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/julian-hecker/Gridify.scss/issues"
   },
-  "homepage": "https://github.com/julian-hecker/Gridify.scss#readme"
+  "homepage": "https://github.com/julian-hecker/Gridify.scss#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
 }

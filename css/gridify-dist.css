@@ -1,0 +1,88 @@
+/*! This project uses Gridify.scss | https://github.com/julian-hecker/Gridify.scss/ | MIT License */
+.gridify-grid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1rem;
+  gap: 1rem; }
+
+.gridify-cols-2 {
+  grid-template-columns: repeat(2, 1fr); }
+
+.gridify-cols-3 {
+  grid-template-columns: repeat(3, 1fr); }
+
+.gridify-cols-4 {
+  grid-template-columns: repeat(4, 1fr); }
+
+.gridify-cols-5 {
+  grid-template-columns: repeat(5, 1fr); }
+
+.gridify-cols-6 {
+  grid-template-columns: repeat(6, 1fr); }
+
+.gridify-cols-7 {
+  grid-template-columns: repeat(7, 1fr); }
+
+.gridify-cols-8 {
+  grid-template-columns: repeat(8, 1fr); }
+
+.gridify-cols-9 {
+  grid-template-columns: repeat(9, 1fr); }
+
+.gridify-cols-10 {
+  grid-template-columns: repeat(10, 1fr); }
+
+.gridify-cols-11 {
+  grid-template-columns: repeat(11, 1fr); }
+
+.gridify-cols-12 {
+  grid-template-columns: repeat(12, 1fr); }
+
+.gridify-rows-2 {
+  grid-template-rows: repeat(2, auto); }
+
+.gridify-rows-3 {
+  grid-template-rows: repeat(3, auto); }
+
+.gridify-rows-4 {
+  grid-template-rows: repeat(4, auto); }
+
+.gridify-rows-5 {
+  grid-template-rows: repeat(5, auto); }
+
+.gridify-rows-6 {
+  grid-template-rows: repeat(6, auto); }
+
+.gridify-rows-7 {
+  grid-template-rows: repeat(7, auto); }
+
+.gridify-rows-8 {
+  grid-template-rows: repeat(8, auto); }
+
+.gridify-rows-9 {
+  grid-template-rows: repeat(9, auto); }
+
+.gridify-rows-10 {
+  grid-template-rows: repeat(10, auto); }
+
+.gridify-rows-11 {
+  grid-template-rows: repeat(11, auto); }
+
+.gridify-rows-12 {
+  grid-template-rows: repeat(12, auto); }
+
+.gridify-gaps-1 {
+  grid-gap: 0.5rem;
+  gap: 0.5rem; }
+
+.gridify-gaps-2 {
+  grid-gap: 1rem;
+  gap: 1rem; }
+
+.gridify-gaps-3 {
+  grid-gap: 2rem;
+  gap: 2rem; }
+
+.gridify-gaps-4 {
+  grid-gap: 4rem;
+  gap: 4rem; }
