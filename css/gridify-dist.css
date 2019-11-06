@@ -1,4 +1,40 @@
 /*! This project uses Gridify.scss | https://github.com/julian-hecker/Gridify.scss/ | MIT License */
+/*! Container based on Bootstrap Grid Container | https://github.com/twbs/bootstrap | MIT License */
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 500px) {
+    .container {
+      max-width: 450px; } }
+  @media (min-width: 700px) {
+    .container {
+      max-width: 650px; } }
+  @media (min-width: 900px) {
+    .container {
+      max-width: 850px; } }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1100px; } }
+
+@media (min-width: 500px) {
+  .container, .container-sm {
+    max-width: 450px; } }
+
+@media (min-width: 700px) {
+  .container, .container-sm, .container-md {
+    max-width: 650px; } }
+
+@media (min-width: 900px) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 850px; } }
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1100px; } }
+
 .gridify-grid {
   display: grid;
   grid-auto-flow: row;
